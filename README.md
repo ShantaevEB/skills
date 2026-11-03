@@ -1,6 +1,6 @@
-# Codex Skills
+# Codex and Claude Skills
 
-A collection of reusable skills for Codex. Each skill lives in its own folder with instructions, documentation, and usage examples.
+A collection of reusable skills. Each skill lives in its own folder with instructions, documentation, and usage examples.
 
 [Russian documentation](README.ru.md)
 
