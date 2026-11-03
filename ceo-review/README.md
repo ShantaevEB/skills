@@ -1,55 +1,59 @@
 # CEO Review
 
-Навык для критического разбора идей, результатов и отчётов с позиции опытного, прагматичного и требовательного генерального директора. Помогает найти слабые места и подготовить материал к обсуждению с руководством, советом директоров или инвесторами.
+A skill for critically reviewing ideas, results, and reports from the perspective of an experienced, pragmatic, and demanding CEO. It helps identify weak points and prepare material for leadership, board, or investor discussions.
 
-## Что проверяет
+[Russian documentation](../README.ru.md#ceo-review)
 
-- **Бизнес-ценность и ROI:** влияние на прибыль, затраты или долю рынка; соответствие результата вложенным ресурсам.
-- **Стратегический фокус:** связь с долгосрочными целями и приоритетами компании.
-- **Риски и узкие места:** юридические, репутационные, технические и операционные угрозы.
-- **Масштабируемость:** экономика, качество и управляемость при расширении решения.
-- **Четкость и презентация:** можно ли за две минуты понять проблему, результат и предлагаемое решение.
+## What it reviews
 
-Навык отделяет факты от предположений, не придумывает недостающие показатели и направляет критику на материал. При недостатке данных даёт предварительный вывод и указывает, какие доказательства нужны.
+- **Business value and ROI:** impact on profit, costs, or market share; whether the result justifies the resources invested.
+- **Strategic focus:** alignment with the company's long-term goals and priorities.
+- **Risks and bottlenecks:** legal, reputational, technical, and operational threats.
+- **Scalability:** economics, quality, and manageability as the solution expands.
+- **Clarity and presentation:** whether the problem, result, and proposed decision can be understood in two minutes.
 
-## Формат ответа
+The skill separates facts from assumptions, does not invent missing metrics, and directs criticism at the material. When evidence is incomplete, it provides a provisional assessment and identifies what needs to be substantiated.
 
-1. **Вердикт CEO:** «Одобряю», «Требует доработки» или «Отклонено» с главным аргументом.
-2. **Жесткая критика:** основные слабые места и слепые зоны.
-3. **Вопросы от руководства:** 3–4 вопроса перед дальнейшим представлением материала.
-4. **Шаги к действию:** конкретные исправления в порядке приоритета.
+## Response format
 
-## Установка
+1. **CEO Verdict:** Approved, Needs revision, or Rejected, with the main reason.
+2. **Blunt Critique:** the most important weaknesses and blind spots.
+3. **Questions from Leadership:** 3–4 questions to address before presenting the material further.
+4. **Action Steps:** specific improvements in priority order.
 
-Отправьте в Codex:
+Reviews use the user's language unless another language is requested.
+
+## Installation
+
+Send this request in Codex:
 
 ```text
-$skill-installer установи ceo-review из https://github.com/ShantaevEB/skills/tree/main/ceo-review
+$skill-installer install ceo-review from https://github.com/ShantaevEB/skills/tree/main/ceo-review
 ```
 
-Или запустите локальный установщик:
+Or run the local installer:
 
 ```sh
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo ShantaevEB/skills --ref main --path ceo-review
 ```
 
-## Пример использования
+## Usage example
 
 ```text
 $ceo-review
-Проведи критический разбор моего предложения по автоматизации обработки заявок.
-Ниже — цель, текущие затраты, бюджет внедрения, ожидаемый эффект и план пилота:
-[вставьте материал]
+Critically review my proposal to automate request processing.
+Below are the goal, current costs, implementation budget, expected impact, and pilot plan:
+[paste your material]
 ```
 
-Для содержательного разбора полезно приложить цели компании, исходные показатели, затраты, сроки и критерии успеха. Можно передать и черновую идею: недостающие данные попадут в вопросы от руководства.
+For a substantive review, include company goals, baseline metrics, costs, timelines, and success criteria. Early ideas are also welcome: missing information will be addressed in the questions from leadership.
 
-При вызове `$ceo-review` без материала навык отвечает: «Режим CEO активирован.»
+When invoked without material, the skill replies: "CEO mode activated." The activation message is translated to the user's language when appropriate.
 
-## Файлы
+## Files
 
-- [`SKILL.md`](SKILL.md) — инструкции навыка.
-- [`agents/openai.yaml`](agents/openai.yaml) — метаданные для интерфейса Codex.
+- [`SKILL.md`](SKILL.md) — skill instructions.
+- [`agents/openai.yaml`](agents/openai.yaml) — metadata for the Codex UI.
 
-Внешние сервисы и дополнительные зависимости для работы навыка не нужны.
+The skill does not require external services or additional dependencies.

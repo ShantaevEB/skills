@@ -1,42 +1,45 @@
 # Codex Skills
 
-Каталог переиспользуемых навыков для Codex. Каждый навык хранится в отдельной папке со своими инструкциями, описанием и примерами использования.
+A collection of reusable skills for Codex. Each skill lives in its own folder with instructions, documentation, and usage examples.
 
-## Навыки
+[Russian documentation](README.ru.md)
 
-| Навык | Описание |
+## Skills
+
+| Skill | Description |
 | --- | --- |
-| [CEO Review](ceo-review/README.md) | Жёсткий конструктивный разбор идей, результатов и отчётов с позиции CEO: бизнес-ценность, стратегия, риски, масштабируемость и ясность. |
+| [CEO Review](ceo-review/README.md) | Tough, constructive reviews of ideas, results, and reports from a CEO's perspective: business value, strategy, risks, scalability, and clarity. |
 
-## Установка навыка
+## Install a skill
 
-Попросите Codex установить нужный навык через `$skill-installer`. Например:
+Ask Codex to install the skill using `$skill-installer`. For example:
 
 ```text
-$skill-installer установи ceo-review из https://github.com/ShantaevEB/skills/tree/main/ceo-review
+$skill-installer install ceo-review from https://github.com/ShantaevEB/skills/tree/main/ceo-review
 ```
 
-Или используйте установщик из локальной установки Codex, указав папку навыка:
+Or use the installer from your local Codex installation, specifying the skill folder:
 
 ```sh
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo ShantaevEB/skills --ref main --path ceo-review
 ```
 
-Установщик не перезаписывает уже существующий навык с тем же именем.
+The installer does not overwrite an existing skill with the same name.
 
-## Структура
+## Repository structure
 
 ```text
-README.md
+README.md             Skill catalog and installation guide
+README.ru.md          Russian documentation
 ceo-review/
-  README.md           Описание, установка и примеры
-  SKILL.md            Инструкции для Codex
-  agents/openai.yaml  Название и описание в интерфейсе Codex
+  README.md           Description, installation, and examples
+  SKILL.md            Instructions for Codex
+  agents/openai.yaml  Display name and description in the Codex UI
 ```
 
-## Добавление навыков
+## Add a skill
 
-Создайте отдельную папку с коротким именем в формате `lowercase-with-hyphens`. Обязательный файл — `SKILL.md` с полями `name` и `description` в YAML-заголовке и инструкциями для Codex в основном тексте.
+Create a separate folder with a short name in `lowercase-with-hyphens` format. The required file is `SKILL.md`, with `name` and `description` in its YAML frontmatter and instructions for Codex in the body.
 
-Добавьте README с назначением, установкой и примером вызова, затем внесите навык в таблицу выше. Метаданные `agents/`, скрипты, справочные материалы и ресурсы добавляйте по необходимости.
+Add a README covering the skill's purpose, installation, and an example invocation, then add it to the table above. Include `agents/` metadata, scripts, references, and assets only as needed.
