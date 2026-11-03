@@ -1,9 +1,42 @@
 # Codex Skills
 
-Переиспользуемые навыки для Codex.
+Каталог переиспользуемых навыков для Codex. Каждый навык хранится в отдельной папке со своими инструкциями, описанием и примерами использования.
 
-Доступен **CEO Review** — критический разбор идей, результатов и отчётов с позиции CEO.
+## Навыки
 
-Навык и инструкция установки находятся в ветке [`skills`](https://github.com/ShantaevEB/skills/tree/skills).
+| Навык | Описание |
+| --- | --- |
+| [CEO Review](ceo-review/README.md) | Жёсткий конструктивный разбор идей, результатов и отчётов с позиции CEO: бизнес-ценность, стратегия, риски, масштабируемость и ясность. |
 
-[Открыть ceo-review](https://github.com/ShantaevEB/skills/tree/skills/ceo-review)
+## Установка навыка
+
+Попросите Codex установить нужный навык через `$skill-installer`. Например:
+
+```text
+$skill-installer установи ceo-review из https://github.com/ShantaevEB/skills/tree/main/ceo-review
+```
+
+Или используйте установщик из локальной установки Codex, указав папку навыка:
+
+```sh
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo ShantaevEB/skills --ref main --path ceo-review
+```
+
+Установщик не перезаписывает уже существующий навык с тем же именем.
+
+## Структура
+
+```text
+README.md
+ceo-review/
+  README.md           Описание, установка и примеры
+  SKILL.md            Инструкции для Codex
+  agents/openai.yaml  Название и описание в интерфейсе Codex
+```
+
+## Добавление навыков
+
+Создайте отдельную папку с коротким именем в формате `lowercase-with-hyphens`. Обязательный файл — `SKILL.md` с полями `name` и `description` в YAML-заголовке и инструкциями для Codex в основном тексте.
+
+Добавьте README с назначением, установкой и примером вызова, затем внесите навык в таблицу выше. Метаданные `agents/`, скрипты, справочные материалы и ресурсы добавляйте по необходимости.
